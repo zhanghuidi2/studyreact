@@ -1,0 +1,22 @@
+.app{
+  height: 100%;
+  width: 100%;
+  .logo{
+    width: 70px;
+    height: 70px;
+  }
+  .top{
+    height: 100px;
+    width: 100%;
+    border-bottom: 1px solid #333;
+    position: fixed;
+    top: 0;
+  }
+  .bottom{
+    height: 100px;
+    width: 100%;
+    border-top: 1px solid #333;
+    position: fixed;
+    bottom: 0;
+  }
+}
