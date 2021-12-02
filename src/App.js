@@ -20,8 +20,8 @@ import PropsPage from './page/PropsPage';
 import UseCallback2 from './page/useCallback2'
 import MyPage from './page/MyPage';
 import ContextPage from './newStudy/ContextPage';
-// import Demo from './page/Antd'
-import Demo from './page/Antd2'
+import Demo from './page/Antd'
+// import Demo from './page/Antd2'
 function App() {
   // jsx
   // 1。变量
