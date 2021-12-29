@@ -1,10 +1,10 @@
 import {
-  createStore,
   combineReducers,
-  applyMiddleware
+  // applyMiddleware
 } from 'redux'
 import thunk from 'redux-thunk'
-
+import {createStore} from '../kRedux/'
+import {applyMiddleware} from '../kRedux/applyMiddleware'
 // Reducer是一个纯函数
 const counterReducer = (state = 1, action) => {
   switch (action.type) {
@@ -15,8 +15,7 @@ const counterReducer = (state = 1, action) => {
     default:
       return state;
   }
-
- }
+}
 // 使用的时候需要state.count
 // const counterReducer = (state = { count: 1 }, action) => {
 //   const count = state.count

@@ -1,5 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
+import ReactDOM from './kReact/react-dom';
+import {Component} from './kReact/Component'
 import './index.css';
 // import styles from './app.modules.css'
 import App from './App';
@@ -45,6 +47,38 @@ const temp = <p>hahhaha</p>
 // 5.循环语句
 // 6.属性
 // 7.模块化 去配置文件里modules=true
+
+// 函数有变量提升
+function Test({name}) {
+  return (
+    <div>
+      {name}
+    </div>
+  )
+}
+class TestClass extends Component {
+  render() {
+    console.log('00000', this.props)
+    return (
+      <div>
+        {this.props.name}
+      </div>
+    )
+  }
+}
+const jsx = (
+  <div>
+    <div>哈哈哈</div>
+    <a href='https://www.baidu.com'>超链接</a>
+    <Test name='函数组建' />
+    <TestClass name='类组建' />
+  </div>
+)
+
+
+
+
+
 ReactDOM.render(
   // <React.StrictMode>
   //   <Provider store={store}>
@@ -53,7 +87,9 @@ ReactDOM.render(
     
   //   {/* {jsx} */}
   // </React.StrictMode>,
-  <App />,
+  // <App />,
+  jsx,
+  
   document.getElementById('root')
 );
   // const render = () => {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {setState, useCallback} from 'react'
 class FormStore{
   constructor(props) {
     this.store = {}; // 数据仓库
@@ -11,19 +11,21 @@ class FormStore{
   getFieldValue = (key) => {
     return this.store[key]
   }
-  setFieldsValue = (newValues)  => {
+  setFieldsValue = (newValues) => {
     this.store = { ...this.store, ...newValues }
     // 刷新组建
     this.fieldEntities.forEach(f => {
       Object.keys(newValues).forEach(key => {
         if (f.props.name === key) {
-          f.forceUpdate()
+          console.log('f', f)
+          f.forceUpdate({})
         }
       }) 
     })
   }
   setFieldEntities = (_this) => {
     this.fieldEntities.push(_this)
+    console.log(_this, this.fieldEntities)
     return () => {
       const _index = this.fieldEntities.findIndex(f => f === _this)
       this.fieldEntities.splice(_index, 1)
@@ -68,3 +70,5 @@ export default function useForm(form) {
   }
   return [formRef.current]
 }
+
+

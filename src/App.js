@@ -20,8 +20,10 @@ import PropsPage from './page/PropsPage';
 import UseCallback2 from './page/useCallback2'
 import MyPage from './page/MyPage';
 import ContextPage from './newStudy/ContextPage';
+import ReduxCom from './page/ReduxCom';
 import Demo from './page/Antd'
 // import Demo from './page/Antd2'
+// import Formily from './page/formily'
 function App() {
   // jsx
   // 1。变量
@@ -38,10 +40,10 @@ function App() {
   const add = (a, b) => (a + b)
   return (
     <div style={{ height: '100%' }}>
-      <Demo />
+      {/* <Demo /> */}
+      {/* <ReduxCom /> */}
 
-
-
+      {/* <Formily /> */}
 
 
       {/* {<ContextPage />} */}{/* {<ClassComponent />} */}
